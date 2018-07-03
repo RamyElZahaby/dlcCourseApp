@@ -6,6 +6,11 @@ public class Course implements Serializable
 {
     String name, description, img;
 
+    public Course(String name, String description)
+    {
+        this.name = name;
+        this.description = description;
+    }
 
     public Course(String name, String description, String img)
     {

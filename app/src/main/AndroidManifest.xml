@@ -18,7 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CourseDetailsActivity"></activity>
+        <activity android:name=".CourseDetailsActivity" />
+        <activity android:name=".CreateCourseActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            ></activity>
     </application>
 
 </manifest>

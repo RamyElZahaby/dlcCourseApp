@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".CreateCourseActivity">
+
+    <TextView
+        android:id="@+id/course_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="Course Name"
+        android:textColor="#6a717c"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/course_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/course_name_text_view" />
+
+    <TextView
+        android:id="@+id/course_description_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="Course Description"
+        android:textColor="#6a717c"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/course_name_input" />
+
+    <EditText
+        android:id="@+id/course_description_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/course_description_text_view" />
+
+    <Button
+        android:id="@+id/create_course_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Course"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/button_shape"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="#FFF"
+        />
+
+</android.support.constraint.ConstraintLayout>
