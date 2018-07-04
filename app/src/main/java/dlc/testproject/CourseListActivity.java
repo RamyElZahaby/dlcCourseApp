@@ -39,7 +39,6 @@ public class CourseListActivity extends AppCompatActivity {
             }
         });
 
-
         initCourses();
     }
 
@@ -48,31 +47,7 @@ public class CourseListActivity extends AppCompatActivity {
     {
         Log.d(TAG, "initCourses: Initializing");
 
-
-        //**************** Store courses to db ****************//
-        //create a shared preferences editor
-//        SharedPreferences.Editor editor = prefs.edit();
-
-
-
-
-//        Course crs = new Course("Computer Science", "CS description", "https://cdn.britannica.com/700x450/77/170477-004-B774BDDF.jpg");
-//        String json = gson.toJson(crs);
-//        editor.putString(json, json);
-//
-//        crs = new Course("Maths", "Maths description",
-//                "https://www.tes.com/sites/default/files/styles/news_article_hero/public/maths_revision.png?itok=PkFnF-cj");
-//        json = gson.toJson(crs);
-//        editor.putString(json, json);
-//
-//        //Put the courses list's JSON in the shared preferences with its corresponding storage key
-//        //editor.putString(storageKey, json);
-//
-//        //Apply changes made to the shared preferences
-//        editor.apply();
-
-
-        //Use Gson library to convert the courses list to Json
+        //Use Gson library to convert objects from and to JSON to be able to store it in shared preferences as strings
         Gson gson = new Gson();
 
         //Get values back from db
@@ -89,10 +64,16 @@ public class CourseListActivity extends AppCompatActivity {
     {
         Log.d(TAG, "initRecyclerView: initialized");
 
-        //Choose the the recycler view by its ID from the
+        //Choose the the recycler view by its ID from the layout
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
+
+        //Create a courseList adapter which handles the recycler view (or any list view)
         coursesAdapter = new CoursesAdapter(this, courses);
+
+        //Setting the View's layout Manager as Linear Layout manager and passing the activity as a context.
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //Set the adapter managing the recyler view
         recyclerView.setAdapter(coursesAdapter);
     }
 
